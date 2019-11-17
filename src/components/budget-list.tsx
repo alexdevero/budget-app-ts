@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-// Import interface
+// Import interfaces
 import { BudgetItemObjInterface, BudgetListInterface } from './../interfaces'
 
 // Import components

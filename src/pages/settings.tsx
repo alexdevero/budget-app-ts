@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
 
-// Import interfaces
+// Import interface
 import { SettingsPageInterface } from './../interfaces'
 
 // Import data for currency codes
@@ -59,7 +59,7 @@ const SettingsPage = (props: SettingsPageInterface) => (
     </fieldset>
 
     <fieldset>
-      <label htmlFor="storage">Preffered storage method:</label>
+      <label htmlFor="storage">Preferred storage method:</label>
 
       <select
         onChange={(event) => props.setStorageMethod(event.target.value)}

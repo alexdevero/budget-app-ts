@@ -7,7 +7,7 @@ import BudgetList from './../components/budget-list'
 import BudgetItemAdd from './../components/budget-item-add'
 import IconSettings from './../components/icon-settings'
 
-// Import interface
+// Import interfaces
 import { BudgetItemObjInterface, HomePageInterface } from './../interfaces'
 
 const HomePage = (props: HomePageInterface) => {
