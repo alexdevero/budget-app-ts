@@ -10,7 +10,7 @@ const BudgetItem = (props: BudgetItemInterface) => {
   return (
     <div className="budget-item">
       <div className="budget-item-paid">
-        {/* Mark as paid */}
+        {/* Checkbox to mark the item as paid */}
         <input
           className="custom-checkbox-checkbox"
           type="checkbox"
@@ -32,7 +32,7 @@ const BudgetItem = (props: BudgetItemInterface) => {
       </div>
 
       <div className="budget-item-date">
-        {/* Date the item was added */}
+        {/* Date the item was paid */}
         <input
           type="date"
           value={props.budgetItem.date}
