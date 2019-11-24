@@ -99,17 +99,17 @@ const HomePage = (props: HomePageInterface) => {
   }
 
   // Handle adding new item
-  function handleAddItem(payload: BudgetItemObjInterface) {
+  function handleAddItem(itemToAdd: BudgetItemObjInterface) {
     // prepare new budgetItemsState
     const newBudgetItemsState = [...props.budgetItems]
 
     // Add new item to newBudgetItemsState
     newBudgetItemsState.push({
-      date: payload.date,
-      isPaid: payload.isPaid,
-      price: payload.price,
-      title: payload.title,
-      id: payload.id
+      date: itemToAdd.date,
+      isPaid: itemToAdd.isPaid,
+      price: itemToAdd.price,
+      title: itemToAdd.title,
+      id: itemToAdd.id
     })
 
     // Update budgetItems state
