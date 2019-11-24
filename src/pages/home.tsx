@@ -20,8 +20,9 @@ const HomePage = (props: HomePageInterface) => {
     // Prepare total costs
     let costs = 0
 
-    // Iterate over items and add costs to total costs
+    // Iterate over items and add their prices to total costs
     props.budgetItems.forEach((item: BudgetItemObjInterface) => {
+      // Add prices only of item that have been paid
       if (item.isPaid) {
         costs += item.price
       }
