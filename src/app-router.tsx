@@ -16,7 +16,7 @@ const AppRouter = () => {
   const [budgetAmount, setBudgetAmount] = React.useState(2500)
   const [storageMethod, setStorageMethod] = React.useState('none')
 
-  // Restore settings from local/session storage if any exists
+  // Restore settings & items from local/session storage if any exists
   React.useEffect(() => {
     // Check if there are any existing data for settings in sessionStorage
     if (window && window.sessionStorage && window.sessionStorage.getItem('budget-app-settings') !== null && window.sessionStorage.getItem('budget-app-settings')!.length > 0) {
@@ -81,6 +81,7 @@ const AppRouter = () => {
     }
   }, [])// Run on initial render
 
+  // Update item if budgetItems or storageMethod changes
   React.useEffect(() => {
     if (storageMethod === 'session') {
       // Save settings to sessionStorage
@@ -105,6 +106,7 @@ const AppRouter = () => {
     }
   }, [budgetItems, storageMethod])// Watch budgetItems & storageMethod props
 
+  // Update settings if budgetPeriod, budgetCurrency, budgetAmount or storageMethod changes
   React.useEffect(() => {
     if (storageMethod === 'session') {
       // Save settings to sessionStorage
