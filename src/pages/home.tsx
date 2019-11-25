@@ -20,8 +20,9 @@ const HomePage = (props: HomePageInterface) => {
     // Prepare total costs
     let costs = 0
 
-    // Iterate over items and add costs to total costs
+    // Iterate over items and add their prices to total costs
     props.budgetItems.forEach((item: BudgetItemObjInterface) => {
+      // Add prices only of item that have been paid
       if (item.isPaid) {
         costs += item.price
       }
@@ -98,17 +99,17 @@ const HomePage = (props: HomePageInterface) => {
   }
 
   // Handle adding new item
-  function handleAddItem(payload: BudgetItemObjInterface) {
+  function handleAddItem(itemToAdd: BudgetItemObjInterface) {
     // prepare new budgetItemsState
     const newBudgetItemsState = [...props.budgetItems]
 
     // Add new item to newBudgetItemsState
     newBudgetItemsState.push({
-      date: payload.date,
-      isPaid: payload.isPaid,
-      price: payload.price,
-      title: payload.title,
-      id: payload.id
+      date: itemToAdd.date,
+      isPaid: itemToAdd.isPaid,
+      price: itemToAdd.price,
+      title: itemToAdd.title,
+      id: itemToAdd.id
     })
 
     // Update budgetItems state
